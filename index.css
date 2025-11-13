@@ -1,0 +1,111 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 30 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 10%;
+
+    --primary: 30 96% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 100% 94%;
+    --secondary-foreground: 30 10% 10%;
+
+    --muted: 25 10% 96%;
+    --muted-foreground: 30 10% 40%;
+
+    --accent: 25 100% 94%;
+    --accent-foreground: 30 10% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 10% 90%;
+    --input: 30 10% 90%;
+    --ring: 30 96% 62%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 30 10% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 30 10% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 30 10% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 30 96% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 30% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 25 30% 20%;
+    --muted-foreground: 30 10% 70%;
+
+    --accent: 25 30% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 10% 20%;
+    --input: 30 10% 20%;
+    --ring: 30 96% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for the Catering Application */
+.page-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section-heading {
+  @apply text-2xl font-bold text-catering-orange mb-6;
+}
+
+.gradient-btn {
+  @apply bg-gradient-to-r from-catering-orange to-catering-yellow text-white font-medium rounded-md shadow-md hover:shadow-lg transition-all duration-300;
+}
+
+/* General card styling */
+.catering-card {
+  @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden;
+}
+
+/* Food item cards */
+.food-card {
+  @apply catering-card border border-gray-100;
+}
+
+/* Vendor cards */
+.vendor-card {
+  @apply catering-card border-l-4 border-catering-orange;
+}
+
+/* Custom icons */
+.icon-container {
+  @apply bg-catering-light-yellow p-2 rounded-full inline-flex items-center justify-center;
+}
